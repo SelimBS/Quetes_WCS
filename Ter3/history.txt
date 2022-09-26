@@ -1,0 +1,25 @@
+   82  mkdir Ter3
+   83  cd Ter3/
+   84  wget https://gist.githubusercontent.com/bhubr/bc3a21a0202109beeb31c4a677e0461b/raw/d8805eb82e8aabffab3b0163596c734f376617d0/wilders.csv
+   85  head -n 5 wilders.csv 
+   86  grep "France,2019,PHP" < wilders.csv 
+   87  grep "France,2019,PHP" < wilders.csv > php_france_2019.csv
+   88  ls
+   89  head php_france_2019.csv 
+   90  grep "PHP" < wilders.csv > php.csv
+   91  ls
+   92  rm php.csv 
+   93  head wilders.csv 
+   94  grep "JavaScript" < wilders.csv > js.csv
+   95  ls
+   96  grep "Toulouse" < js.csv > js_toulouse.csv ; grep "Biarritz" < js.csv > js_Biarritz.csv
+   97  ls
+   98  cat js_Biarritz.csv js_toulouse.csv | sort -u > javascript_biarrritz_toulouse.csv
+   99  ls
+  100  head javascript_biarrritz_toulouse.csv 
+  101  ls
+  102  rm js.csv js_Biarritz.csv js_toulouse.csv 
+  103  ls
+  104  history | tail - 50
+  105  history | tail -50
+  106  history | tail -25 > history.txt
